@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+import com.streetninja.corp.android.base.BaseAuthenticatedActivity;
+
+public class MainActivity extends BaseAuthenticatedActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
