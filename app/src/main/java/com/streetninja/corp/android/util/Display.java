@@ -5,7 +5,8 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.util.DisplayMetrics;
 
-import com.google.corp.netops.android.r11_c.R;
+import com.streetninja.corp.android.peoplemap.R;
+
 
 /**
  * Display utilities to covert display resources to the required value.

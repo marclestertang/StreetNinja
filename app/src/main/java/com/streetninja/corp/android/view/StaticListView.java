@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 
-import com.google.corp.netops.android.r11_c.R;
+import com.streetninja.corp.android.peoplemap.R;
 
 
 /**

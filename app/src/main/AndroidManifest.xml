@@ -9,7 +9,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="No">
+            android:theme="@style/Theme.AppleBytes">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
