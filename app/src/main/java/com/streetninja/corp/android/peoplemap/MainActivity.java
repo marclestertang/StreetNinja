@@ -16,9 +16,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
+import com.streetninja.corp.android.base.BaseActivity;
 import com.streetninja.corp.android.base.BaseAuthenticatedActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private DrawerLayout mDrawerLayout;
     private RecyclerView rv;
