@@ -11,4 +11,5 @@
     <string name="title_activity_search">SearchActivity</string>
 
     <string name="search">Search</string>
+    <string name="title_activity_authentication_splash">AuthenticationSplashActivity</string>
 </resources>
