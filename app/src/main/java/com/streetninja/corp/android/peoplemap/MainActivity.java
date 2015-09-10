@@ -22,11 +22,10 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.streetninja.corp.android.peoplemap.auth.AccountGeneral;
 import com.streetninja.corp.android.base.BaseActivity;
-import com.streetninja.corp.android.base.BaseAuthenticatedActivity;
+import com.streetninja.corp.android.peoplemap.auth.AccountGeneral;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     public final static String TAG = MainActivity.class.getSimpleName();
 

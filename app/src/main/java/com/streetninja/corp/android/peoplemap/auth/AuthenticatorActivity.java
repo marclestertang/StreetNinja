@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.VolleyError;
 import com.streetninja.corp.android.peoplemap.R;
@@ -38,15 +39,17 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
         setContentView(R.layout.activity_authentication_splash);
         mAccountManager = AccountManager.get(getBaseContext());
 
-        final String username = ((EditText)findViewById(R.id.textUsername)).getText().toString();
-        final String password = ((EditText)findViewById(R.id.textPassword)).getText().toString();
+        final EditText txtUsername = ((EditText)findViewById(R.id.textUsername));
+        final EditText txtPassword = ((EditText)findViewById(R.id.textPassword));
 
         Button btnSignin = ((Button) findViewById(R.id.btnSignin));
         btnSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final String username = txtUsername.getText().toString();
+                final String password = txtPassword.getText().toString();
                 AuthenticationServerRequest.asyncUserSignIn(AuthenticatorActivity.this, username,
-                    password, AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS,
+                        password, AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS,
                         new AuthenticationServerRequest.ResponseListener() {
                             @Override
                             public void requestStarted() {
@@ -56,18 +59,21 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
                             @Override
                             public void requestCompleted(String response) {
                                 Log.d(TAG, "request completed");
+                                Toast.makeText(AuthenticatorActivity.this, response.toString(), Toast.LENGTH_LONG).show();
                             }
 
                             @Override
-                            public void requestCompleted() {}
+                            public void requestCompleted() {
+                            }
 
 
                             @Override
                             public void requestEndedWithError(VolleyError error) {
                                 Log.e(TAG, "request ended");
+                                Toast.makeText(AuthenticatorActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
                             }
                         }
-                    );
+                );
             }
         });
 
