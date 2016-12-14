@@ -59,7 +59,7 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
                             @Override
                             public void requestCompleted(String response) {
                                 Log.d(TAG, "request completed");
-                                Toast.makeText(AuthenticatorActivity.this, response.toString(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(AuthenticatorActivity.this, response, Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -70,7 +70,7 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
                             @Override
                             public void requestEndedWithError(VolleyError error) {
                                 Log.e(TAG, "request ended");
-                                Toast.makeText(AuthenticatorActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(AuthenticatorActivity.this, error.getMessage()!=null?error.getMessage():"Network error", Toast.LENGTH_LONG).show();
                             }
                         }
                 );
